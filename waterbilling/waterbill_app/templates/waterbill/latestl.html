@@ -1,0 +1,285 @@
+{% extends 'waterbill/logmain.html'%}
+
+{% block title %} Current-Bill-Online Water Bill Application {% endblock %}
+
+{% block content %}
+
+<div class="app-title">
+    <div>
+        <h1><i class="fa fa-th-list"></i> Current Bill</h1>
+        <p>The Data Below Is All About Your Bills</p>
+    </div>
+    <form class="bord" style="float: right;">
+        <div class="col-auto">
+            <div class="input-group mb-12">
+                <div class="input-group-prepend">
+                    <a href="javascript:;" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-file t-plus-1 text-danger fa-fw fa-lg"></i> Export as PDF</a>
+                    <a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="tile">
+            <section class="invoice">
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <h2 class="page-header"><i class="fa fa-globe"></i> Ginatilan Water</h2>
+                    </div>
+                    <div class="col-6">
+                        <form class="bord" style="float: right;">
+                            <div class="col-auto">
+                                 <h1 style="padding-left: 14%; font-size: 100%;" id="date"></h1>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="tile text-center">
+                            <h4 class="tile-title">Company Information</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Name</th>
+                                        <td>Ginatilan Water</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Address</th>
+                                        <td>Poblacion, Ginatilan Cebu</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Zip Code</th>
+                                        <td>6028</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Country</th>
+                                        <td>Philippines</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="tile text-center">
+                            <h4 class="tile-title">Customer Information</h4>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Name</th>
+                                        <td>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Account ID</th>
+                                        <td>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Meter Number</th>
+                                        <td>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Address</th>
+                                        <td>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Zip Code</th>
+                                        <td>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Country</th>
+                                        <td>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Contact Info</th>
+                                        <td>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-6">
+                        <div class="tile text-center">
+                            <h4 class="tile-title">Bill Information</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Month</th>
+                                        <td>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Posted On</th>
+                                        <td>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Postd By</th>
+                                        <td>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Payment Schedule</th>
+                                        <td>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 table-responsive">
+                        <!-- begin invoice-content -->
+                        <div class="invoice-content">
+                            <!-- begin table-responsive -->
+                            <div class="invoice-company text-center f-w-600">
+                                <span class="pull-right hidden-print"></span>Water Readings and Usage
+                            </div>
+                            <div class="table-container">
+                                <table class="table table-bordered">
+                                    <tbody style="text-align:center;">
+                                        <tr class="table-active">
+                                            <td colspan="2">
+                                                <label for="examplecurrent_read" class="col-form-label">Current Reading</label>
+                                            </td>
+                                            <td colspan="2">
+                                                <div class="row">
+                                                    <label for="examplecurrent_read" class="col-sm-4 col-form-label"></label>
+                                                    <div class="col-sm-6">
+                                                        <input type="current_read" class="form-control" placeholder="m3">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <label for="exampleprevious_read" class="col-form-label">Previous Reading</label>
+                                            </td>
+                                            <td colspan="2">
+                                                <div class="row">
+                                                    <label for="exampleprevious_read" class="col-sm-4 col-form-label"></label>
+                                                    <div class="col-sm-6">
+                                                        <input type="previous_read" class="form-control" placeholder="m3">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-active">
+                                            <td colspan="2">
+                                                <label for="exampleusage" class="col-form-label">Usage</label>
+                                            </td>
+                                            <td colspan="2">
+                                                <div class="row">
+                                                    <label for="exampleusage" class="col-sm-4 col-form-label"></label>
+                                                    <div class="col-sm-6">
+                                                        <input type="usage" class="form-control" placeholder="m3">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="invoice-company text-center f-w-600">
+                                <span class="pull-right hidden-print"></span>Water Bill Payments
+                            </div>
+                            <div class="table-container">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="row">
+                                                    <label for="examplebill" class="col-sm-4 col-form-label">Bill</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="bill" class="form-control" placeholder="php">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td colspan="2">
+                                                <div class="row">
+                                                    <label for="examplepenalty" class="col-sm-4 col-form-label">Penalty</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="penalty" class="form-control" placeholder="php">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="row">
+                                                    <label for="exampletotal_bill" class="col-sm-4 col-form-label">Total Bill</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="total_bill" class="form-control" placeholder="php">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td colspan="2">
+                                                <div class="row">
+                                                    <label for="exampleprev_due" class="col-sm-4 col-form-label">Previous Due</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="prev_due" class="form-control" placeholder="php">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end table-responsive -->
+                            <!-- begin invoice-price -->
+                            <div class="invoice-price">
+                                <div class="invoice-price-left">
+
+                                </div>
+                                <div class="invoice-price-right">
+                                    <label for="exampletotal_bill" class="col-form-label">Total Amount</label>
+                                     <span class="f-w-200">
+                                       <input type="prev_due" class="form-control" placeholder="php">
+                                     </span>
+                                </div>
+                            </div>
+                            <!-- end invoice-price -->
+                        </div>
+                        <!-- end invoice-content -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

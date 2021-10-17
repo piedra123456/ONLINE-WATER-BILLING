@@ -1,0 +1,32 @@
+{% extends 'waterbill/mainsign.html'%}
+
+{% block content %}
+
+<section class="material-half-bg">
+    <div class="cover"></div>
+</section>
+<section class="login-content">
+    <div class="logo">
+        <h1>Ginatilan Water</h1>
+    </div>
+    <div class="login-box">
+        <form class="login-form">
+            <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
+            <div class="form-group">
+                <label class="control-label">Enter Your Meter Number</label>
+                <input class="form-control" type="text" placeholder="meter number" autofocus>
+            </div>
+
+            <div class="form-group btn-container">
+                <div style='float: left;'>
+                    <button class="btn btn-primary btn-block"><a href="latestl.html"><i class="fa fa-sign-in fa-lg fa-fw"></i>LOGIN</a></button>
+                </div>
+                <div style='float: right;'>
+                    <button class="btn btn-primary btn-block"><a href="latestqv.html"><i class="fa fa-sign-in fa-lg fa-fw"></i>QUICK VIEW</a></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

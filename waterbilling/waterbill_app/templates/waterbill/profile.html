@@ -1,0 +1,62 @@
+{% extends 'waterbill/logmain.html'%}
+{% block title %} Profile-Online Water Bill Application {% endblock %}
+
+{% block content %}
+
+<div class="row user">
+  <div class="col-md-3">
+    <div class="tile p-0">
+        <ul class="nav flex-column nav-tabs user-tabs">
+            <li class="nav-item"><a class="nav-link" href="#user-profile" data-toggle="tab">Edit Information</a></li>
+        </ul>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="tab-content">
+        <div class="tab-pane fade" id="user-profile">
+            <div class="tile user-profile">
+                <h4 class="line-head">Profile</h4>
+                <form>
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <label>Account ID</label>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Meter Number</label>
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 mb-4">
+                            <label>Name</label>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-8 mb-4">
+                            <label>Address</label>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-8 mb-4">
+                            <label>Zip Code</label>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-8 mb-4">
+                            <label>Phone Number</label>
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="row mb-10">
+                        <div class="col-md-12">
+                            <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-lg fa-check-circle"></i> Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
