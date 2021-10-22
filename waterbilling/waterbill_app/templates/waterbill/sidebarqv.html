@@ -1,21 +1,12 @@
 {% load static %}
 
 <!-- Sidebar menu-->
-<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-<aside class="app-sidebar">
-  <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="{% static '/images/wat.jpg' %}" alt="User Image">
-      <div>
-          <p class="app-sidebar__user-name">Ginatilan</p>
-          <p class="app-sidebar__user-designation">Waters</p>
-      </div>
-  </div>
-  <ul class="app-menu">
-      <li>
-          <a class="app-menu__item" href="{% url 'latestqv' %}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Current Bills</span></a>
-      </li>
-      <li>
-          <a class="app-menu__item" href="{% url 'oldqv' %}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Usage and Payments <br>History</span></a>
-      </li>
-  </ul>
-</aside>
+{% with url_name=request.resolver_match.url_name %}
+<li>
+    <a class="app-menu__item {% if url_name == 'latestqv' %}active {% endif %}" href="{% url 'latestqv' %}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Current Bills</span></a>
+</li>
+<li>
+    <a class="app-menu__item {% if url_name == 'oldqv' %}active {% endif %}" href="{% url 'oldqv' %}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Usage and Payments <br>History</span></a>
+</li>
+{% endwith %}
 <!-- End of Sidebar -->

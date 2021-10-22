@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Niconne);
+
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -165,7 +168,7 @@ sup {
 }
 
 a {
-    color: #dc3545;
+    color: #004a43;
     text-decoration: none;
     background-color: transparent;
 }
@@ -1772,7 +1775,7 @@ pre code {
 
 .table td {
     padding: 0.25rem;
-    vertical-align: top;
+    vertical-align: center;
     border-top: 1px solid #dee2e6;
 }
 
@@ -15252,7 +15255,7 @@ be a descendant of the grid when it is being dragged.
 @media (max-width: 480px) {
     .app-title {
         margin: -15px -15px 15px;
-        padding: 20px;
+        padding: 10px;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -15302,7 +15305,7 @@ be a descendant of the grid when it is being dragged.
     position: relative;
     background: #ffffff;
     border-radius: 3px;
-    padding: 20px;
+    padding: 10px;
     -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;

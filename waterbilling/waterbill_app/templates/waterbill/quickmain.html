@@ -19,10 +19,31 @@
   <body class="app sidebar-mini">
 
     <!-- Header Navbar-->
-    {% include "waterbill/topbarqv.html" %}
+    <header class="app-header"><a class="app-header__logo" href="{% url 'latestqv' %}">Water Bills</a>
+      <!-- Sidebar toggle button-->
+      <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+      <!-- Navbar Right Menu-->
+      <ul class="app-nav">
+        {% include "waterbill/topbarqv.html" %}
+      </ul>
+    </header>
     <!-- end of Header Navbar-->
+    <!-- modal-->
+      {% include "waterbill/modal.html" %}
+    <!-- end of modal-->
     <!-- Sidebar menu-->
-    {% include "waterbill/sidebarqv.html" %}
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="{% static '/images/wat.jpg' %}" alt="User Image">
+          <div>
+              <p class="app-sidebar__user-name">Ginatilan</p>
+              <p class="app-sidebar__user-designation">Waters</p>
+          </div>
+      </div>
+      <ul class="app-menu">
+        {% include "waterbill/sidebarqv.html" %}
+      </ul>
+    </aside>
     <!-- End of Sidebar -->
 
     <main class="app-content">
@@ -40,10 +61,10 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
   <!-- Essential javascripts for application to work-->
-  <script type="text/javascript" src="{% static '/js/login/jquery-3.3.1.min.js' %}"></script>
-  <script type="text/javascript" src="{% static '/js/login/pooper.min.js' %}"></script>
-  <script type="text/javascript" src="{% static '/js/login/bootstrap.min.js' %}"></script>
-  <script type="text/javascript" src="{% static '/js/login/main.js' %}"></script>
+  <script type="text/javascript" src="{% static '/js/quickview/jquery-3.3.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static '/js/quickview/pooper.min.js' %}"></script>
+  <script type="text/javascript" src="{% static '/js/quickview/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static '/js/quickview/main.js' %}"></script>
 
   <script type="text/javascript">
         n = new Date();

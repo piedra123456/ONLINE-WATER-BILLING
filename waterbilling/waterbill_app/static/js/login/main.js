@@ -37,3 +37,8 @@ while (currentYear >= earliestYear) {
     dateDropdown.add(dateOption);
     currentYear -= 1;
 }
+
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
