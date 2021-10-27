@@ -10,22 +10,27 @@
         <h1>Ginatilan Water</h1>
     </div>
     <div class="login-box">
-        <form class="login-form">
+        <div class="login-form">
             <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
-            <div class="form-group">
+            <form class="signin" method="POST" action="">
+              {% csrf_token %}
                 <label class="control-label">Enter Your Meter Number</label>
-                <input class="form-control" type="text" placeholder="meter number" autofocus>
-            </div>
+                <input class="form-control form-control-user" type="text" id="meter_num" placeholder="meter number">
+            </form>
+            {% for message in messages %}
+            <p id="messages">{{messages}}</p>
+            {% endfor %}
 
             <div class="form-group btn-container">
+              <hr />
                 <div style='float: left;'>
-                    <button class="btn btn-primary" type="button"><i class="fa fa-sign-in fa-lg fa-fw"></i> LOGIN</button>
+                    <a class="btn btn-primary" href="{% url 'latestl' %}"><i class="fa fa-sign-in fa-lg fa-fw"></i> LOGIN</a>
                 </div>
+              
                 <div style='float: right;'>
-                    <button class="btn btn-secondary" type="button"><i class="fa fa-sign-in fa-lg fa-fw"></i> QUICK VIEW</button>
+                    <a class="btn btn-secondary" href="{% url 'latestqv' %}"><i class="fa fa-sign-in fa-lg fa-fw"></i> QUICK VIEW</a>
                 </div>
             </div>
-        </form>
     </div>
 </section>
 
