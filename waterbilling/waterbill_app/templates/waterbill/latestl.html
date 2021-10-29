@@ -45,30 +45,32 @@
                                     <tr>
                                     </tr>
                                 </thead>
+
                                 <tbody>
+                                  {% for company in companyinfo %}
                                     <tr>
                                         <th scope="row">Name</th>
-                                        <td>Ginatilan Water</td>
+                                        <td>{{ company.name }}</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Address</th>
-                                        <td>Poblacion, Ginatilan Cebu</td>
+                                        <td>{{ company.address }}</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Zip Code</th>
-                                        <td>6028</td>
+                                        <td>{{company.zipcode}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Country</th>
-                                        <td>Philippines</td>
+                                        <td>{{company.country}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Phone</th>
-                                        <td>
-                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                        </td>
+                                        <td>{{ companyinfo.phone }}</td>
                                     </tr>
+                                    {% endfor %}
                                 </tbody>
+
                             </table>
                         </div>
                     </div>
@@ -81,48 +83,24 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                  {% for user_info in user_infos %}
                                     <tr>
                                         <th scope="row">Name</th>
-                                        <td>
-                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                        </td>
+                                        <td>{{user_info.first_name}} {{user_info.middle_name}} {{user_info.last_name}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Account ID</th>
-                                        <td>
-                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                        </td>
+                                        <td>{{user_info.account_id}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Meter Number</th>
-                                        <td>
-                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                        </td>
+                                      <td>{{user_info.meter_number}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Address</th>
-                                        <td>
-                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                        </td>
+                                        <td>{{user_info.address}}</td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">Zip Code</th>
-                                        <td>
-                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Country</th>
-                                        <td>
-                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Contact Info</th>
-                                        <td>
-                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                        </td>
-                                    </tr>
+                                    {% endfor %}
                                 </tbody>
                             </table>
                         </div>
@@ -140,25 +118,25 @@
                                     <tr>
                                         <th scope="row">Month</th>
                                         <td>
-                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Posted On</th>
                                         <td>
-                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Posted By</th>
                                         <td>
-                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Payment Schedule</th>
                                         <td>
-                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+
                                         </td>
                                     </tr>
                                 </tbody>

@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'waterbilling.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mysqlwaterbilling',
+        'NAME': 'ginatilan_db',
         'USER': 'root',
         'PASSWORD': 'akorani###05',
         'PORT': 3306,
