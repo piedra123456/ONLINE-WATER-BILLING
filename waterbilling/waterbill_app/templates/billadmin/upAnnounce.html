@@ -1,0 +1,53 @@
+{% extends 'billadmin/logmain.html'%}
+
+{% block title %} Update_Announcements-Online Water Bill Application {% endblock %}
+
+{% block content %}
+
+<div class="app-title">
+    <div>
+        <h1><i class="fa fa-edit"></i> Announcements</h1>
+        <p>Update Announcements here.</p>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+        <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+        <li class="breadcrumb-item">Forms</li>
+        <li class="breadcrumb-item"><a href="#">Announcements</a></li>
+    </ul>
+</div>
+<div class="row justify-content-md-center">
+    <div class="col-md-9">
+        <div class="tile">
+            <h3 class="line-head text-center">Add Announcements</h3>
+            <div class="tile-body">
+                <form>
+                    <div class="form-group">
+                        <label class="control-label">Title :</label>
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Posted By :</label>
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Posted On :</label>
+                        <input class="form-control" type="date">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Image about the Announcements :</label>
+                        <input class="form-control" type="file">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Description</label>
+                        <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="tile-footer text-center">
+              <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>UPDATE</button>&nbsp;&nbsp;&nbsp;<a class="btn btn-secondary" href="#"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

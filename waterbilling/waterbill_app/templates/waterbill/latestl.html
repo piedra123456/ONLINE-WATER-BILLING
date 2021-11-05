@@ -5,20 +5,20 @@
 {% block content %}
 
 <div class="app-title">
-    <div>
-        <h1><i class="fa fa-th-list"></i> Current Bill</h1>
-        <p>The Data Below Is All About Your Bills</p>
-    </div>
-    <form class="bord" style="float: right;">
-        <div class="col-auto">
-            <div class="input-group mb-12">
-                <div class="input-group-prepend">
-                    <a href="javascript:;" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-file t-plus-1 text-danger fa-fw fa-lg"></i> Export as PDF</a>
-                    <a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a>
-                </div>
-            </div>
-        </div>
-    </form>
+  <div>
+      <h1><i class="fa fa-th-list"></i> Current Bills</h1>
+      <p>The Data Below Is All About Your Bills</p>
+  </div>
+  <form class="bord" style="float: right;">
+      <div class="col-auto">
+          <div class="input-group mb-12">
+              <div class="input-group-prepend">
+                  <a href="javascript:;" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-file t-plus-1 text-danger fa-fw fa-lg"></i> Export as PDF</a>
+                  <a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a>
+              </div>
+          </div>
+      </div>
+  </form>
 </div>
 <div class="row">
     <div class="col-md-12">
@@ -37,70 +37,36 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="clearfix"></div>
                     <div class="col-md-6">
                         <div class="tile text-center">
                             <h4 class="tile-title">Company Information</h4>
                             <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                    </tr>
-                                </thead>
-
                                 <tbody>
-                                  {% for company in companyinfo %}
                                     <tr>
                                         <th scope="row">Name</th>
-                                        <td>{{ company.name }}</td>
+                                        <td>
+                                          Ginatilan Waters
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Address</th>
-                                        <td>{{ company.address }}</td>
+                                        <td>
+                                          Poblacion, Ginatilan Cebu
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Zip Code</th>
-                                        <td>{{company.zipcode}}</td>
+                                        <th scope="row">Zip_Code</th>
+                                        <td>
+                                          6028
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Country</th>
-                                        <td>{{company.country}}</td>
+                                        <th scope="row">Contact_Number</th>
+                                        <td>
+                                          09123456789
+                                        </td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">Phone</th>
-                                        <td>{{ companyinfo.phone }}</td>
-                                    </tr>
-                                    {% endfor %}
-                                </tbody>
-
-                            </table>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="tile text-center">
-                            <h4 class="tile-title">Customer Information</h4>
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                  {% for user_info in user_infos %}
-                                    <tr>
-                                        <th scope="row">Name</th>
-                                        <td>{{user_info.first_name}} {{user_info.middle_name}} {{user_info.last_name}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Account ID</th>
-                                        <td>{{user_info.account_id}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Meter Number</th>
-                                      <td>{{user_info.meter_number}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Address</th>
-                                        <td>{{user_info.address}}</td>
-                                    </tr>
-                                    {% endfor %}
                                 </tbody>
                             </table>
                         </div>
@@ -110,33 +76,29 @@
                         <div class="tile text-center">
                             <h4 class="tile-title">Bill Information</h4>
                             <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                    </tr>
-                                </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">Month</th>
                                         <td>
-
+                                          <input type="text" class="form-control">
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Posted On</th>
                                         <td>
-
+                                          <input type="text" class="form-control">
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Posted By</th>
                                         <td>
-
+                                          <input type="text" class="form-control">
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Payment Schedule</th>
                                         <td>
-
+                                          <input type="text" class="form-control">
                                         </td>
                                     </tr>
                                 </tbody>
@@ -153,9 +115,9 @@
                                 <span class="pull-right hidden-print"></span>Water Readings and Usage
                             </div>
                             <div class="table-container">
-                                <table class="table table-bordered">
+                                <table class="table table-bordered table-striped">
                                     <tbody style="text-align:center;">
-                                        <tr class="table-active">
+                                        <tr>
                                             <td colspan="2">
                                                 <label for="examplecurrent_read" class="col-form-label">Current Reading</label>
                                             </td>
@@ -181,7 +143,7 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr class="table-active">
+                                        <tr>
                                             <td colspan="2">
                                                 <label for="exampleusage" class="col-form-label">Usage</label>
                                             </td>

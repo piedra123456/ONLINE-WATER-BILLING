@@ -1,0 +1,12 @@
+{% load static %}
+
+<!-- Sidebar menu-->
+{% with url_name=request.resolver_match.url_name %}
+<li>
+    <a class="app-menu__item {% if url_name == 'addAnnounce' %}active {% endif %}" href="{% url 'addAnnounce' %}"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Add Announcements</span></a>
+</li>
+<li>
+    <a class="app-menu__item {% if url_name == 'Announce' %}active {% endif %}" href="{% url 'Announce' %}"><i class="app-menu__icon fa fa-eye"></i><span class="app-menu__label">Announcements</span></a>
+</li>
+{% endwith %}
+<!-- End of Sidebar -->

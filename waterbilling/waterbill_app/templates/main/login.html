@@ -1,0 +1,39 @@
+{% extends 'main/mainad.html'%}
+
+{% block title %} Login-Page-Online Water Bill Application {% endblock %}
+
+{% block content %}
+
+<section class="material-half-bg">
+    <div class="cover"></div>
+</section>
+<section class="login-content">
+    <div class="logo">
+        <h1>Ginatilan Water</h1>
+    </div>
+    <div class="login-box">
+        <div class="login-form">
+            <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>LOG IN</h3>
+            <form action="/login/" method="POST">
+                {%csrf_token%}
+                <div class="form-group">
+                    <label class="control-label">USERNAME</label>
+                    <input class="form-control" type="text" placeholder="Email" autofocus>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">PASSWORD</label>
+                    <input class="form-control" type="password" placeholder="Password">
+                </div>
+                {% for message in messages %}
+     						   <p class="text-danger" id="messages">{{message}}</p>
+     			  		{% endfor %}
+                <div class="form-group btn-container">
+                <hr / />
+                    <button class="btn btn-primary btn-block" type="submit" <i class="fa fa-sign-in fa-lg fa-fw"></i> LOGIN </button>
+                </div>
+             </form>
+          </div>
+      </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'waterbill/logmain.html'%}
+
+{% block title %} Customer-Information-Online Water Bill Application {% endblock %}
+
+{% block content %}
+
+<form action="/consumer/{{result.meter_number}}">
+
+  <div class="app-title">
+    <div>
+        <h1><i class="fa fa-th-list"></i> Customer Information</h1>
+        <p>The Data Below Is All About Your Information</p>
+    </div>
+    <form class="bord" style="float: right;">
+        <div class="col-auto">
+            <div class="input-group mb-12">
+                <div class="input-group-prepend">
+                    <a href="javascript:;" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-file t-plus-1 text-danger fa-fw fa-lg"></i> Export as PDF</a>
+                    <a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a>
+                </div>
+            </div>
+        </div>
+    </form>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <div class="tile">
+              <section class="invoice">
+                  <div class="row mb-4">
+                      <div class="col-6">
+                          <h2 class="page-header"><i class="fa fa-globe"></i> Ginatilan Water</h2>
+                      </div>
+                      <div class="col-6">
+                          <form class="bord" style="float: right;">
+                              <div class="col-auto">
+                                   <h1 style="padding-left: 14%; font-size: 100%;" id="date"></h1>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="row justify-content-md-center"">
+                      <div class="col-md-7">
+                        <div class="tile text-center">
+                            <h4 class="tile-title">Customer Information</h4>
+                            <table class="table table-striped table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Name</th>
+                                        <td>{{result.first_name}} {{result.middle_name}} {{result.last_name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Account_ID</th>
+                                        <td>{{result.account_id}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Meter Number</th>
+                                        <td>{{result.meter_number}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Address</th>
+                                        <td>{{result.address}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+                  </div>
+              </section>
+          </div>
+      </div>
+  </div>
+</form>
+
+{% endblock %}

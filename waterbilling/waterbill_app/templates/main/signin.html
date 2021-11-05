@@ -1,6 +1,6 @@
-{% extends 'waterbill/mainsign.html'%}
+{% extends 'main/mainsign.html'%}
 
-{% block title %} SignIn Page {% endblock %}
+{% block title %} SignIn Page-Online Water Bill Application {% endblock %}
 
 {% block content %}
 
@@ -15,18 +15,20 @@
         <div class="login-form">
             <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
             <form action="/signin/" method="POST">
-              {%csrf_token%}
-                <label class="control-label">Enter Your Meter Number</label>
-                <input class="form-control form-control-user" type="text" id="meter_number" name="meter_number">
+                {%csrf_token%}
+                <div class="form-group">
+                    <label class="control-label">Enter Your Meter Number</label>
+                    <input class="form-control form-control-user" type="text" id="meter_number" name="meter_number">
+                </div>
                 {% for message in messages %}
-   						 <p class="text-danger" id="messages">{{message}}</p>
-   			  		 {% endfor %}
+   						     <p class="text-danger" id="messages">{{message}}</p>
+   			  		  {% endfor %}
                 <div class="form-group btn-container">
                 <hr / />
                     <button class="btn btn-primary btn-block" type="submit" <i class="fa fa-sign-in fa-lg fa-fw"></i> SUBMIT </button>
                 </div>
-                {{results.first_name}}
              </form>
+          </div>
       </div>
 </section>
 

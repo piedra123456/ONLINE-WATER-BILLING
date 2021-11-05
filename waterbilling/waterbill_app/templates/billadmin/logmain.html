@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- Main CSS-->
-      <link rel="stylesheet" type="text/css" href=" {% static '/css/main/final.css' %}">
+      <link rel="stylesheet" type="text/css" href=" {% static '/css/admin/admin.css' %}">
 
       <!-- Font-icon css-->
       <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,12 +24,12 @@
       <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
       <!-- Navbar Right Menu-->
       <ul class="app-nav">
-        {% include "waterbill/topbarl.html" %}
+        {% include "billadmin/topbara.html" %}
       </ul>
     </header>
     <!-- end of Header Navbar-->
     <!-- modal-->
-      {% include "waterbill/modal.html" %}
+      {% include "billadmin/modala.html" %}
     <!-- end of modal-->
     <!-- Sidebar menu-->
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
@@ -41,7 +41,7 @@
           </div>
       </div>
       <ul class="app-menu">
-        {% include "waterbill/sidebarl.html" %}
+        {% include "billadmin/sidebarl.html" %}
       </ul>
     </aside>
     <!-- End of Sidebar -->

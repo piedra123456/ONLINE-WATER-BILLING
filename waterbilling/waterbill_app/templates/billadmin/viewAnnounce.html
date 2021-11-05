@@ -1,0 +1,50 @@
+{% extends 'billadmin/logmain.html'%}
+
+{% block title %} View_Announcements-Online Water Bill Application {% endblock %}
+
+{% block content %}
+
+<div class="app-title">
+    <div>
+        <h1><i class="fa fa-edit"></i> Announcements</h1>
+        <p>View Announcements here.</p>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+        <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+        <li class="breadcrumb-item">Forms</li>
+        <li class="breadcrumb-item"><a href="#">Announcements</a></li>
+    </ul>
+</div>
+<div class="row justify-content-md-center">
+    <div class="col-md-9">
+        <div class="tile">
+            <h3 class="line-head text-center">View Announcements</h3>
+            <div class="tile-body">
+                <form>
+                    <div class="form-group">
+                        <label class="control-label">Title :</label>
+                        <input class="form-control" type="text" disabled="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Posted By :</label>
+                        <input class="form-control" type="text" disabled="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Posted On :</label>
+                        <input class="form-control" type="date" disabled="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Image about the Announcements :</label>
+                        <input class="form-control" type="file" disabled="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Description</label>
+                        <textarea class="form-control" rows="5" disabled=""></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

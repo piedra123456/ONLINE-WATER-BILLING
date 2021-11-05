@@ -3,10 +3,16 @@
 <!-- Sidebar menu-->
 {% with url_name=request.resolver_match.url_name %}
 <li>
+    <a class="app-menu__item {% if url_name == 'consumer' %}active {% endif %}" href="/consumer/{{user.meter_number}}"><i class="app-menu__icon fa fa-eye"></i><span class="app-menu__label">Consumer Information</span></a>
+</li>
+<li>
     <a class="app-menu__item {% if url_name == 'latestl' %}active {% endif %}" href="{% url 'latestl' %}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Current Bills</span></a>
 </li>
 <li>
     <a class="app-menu__item {% if url_name == 'oldl' %}active {% endif %}" href="{% url 'oldl' %}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Usage and Payments <br>History</span></a>
+</li>
+<li>
+    <a class="app-menu__item {% if url_name == 'Announcements' %}active {% endif %}" href="{% url 'Announcements' %}"><i class="app-menu__icon fa fa-eye"></i><span class="app-menu__label">Announcements</span></a>
 </li>
 {% endwith %}
 <!-- End of Sidebar -->

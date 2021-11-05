@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ginatilan_db',
         'USER': 'root',
-        'PASSWORD': 'akorani###05',
+        'PASSWORD': 'akorani###09',
         'PORT': 3306,
         'HOST': '127.0.0.1',
     }
